@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Fundamentos Practicos de HTML</title>
+  <link rel="stylesheet" href="estilos.css">    <!-- Ejercicio 8 -->
+  <style>
+    /* Estilo general para el fondo y fuente */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  color: hwb(214 9% 13%);
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+h2 {
+  color: #0d47a1;
+  font-size: 28px;
+  margin-top: 30px;
+  padding-left: 10px;
+}
+
+h3 {
+  color: #1565c0;
+  font-size: 22px;
+  margin-top: 20px;
+  text-decoration: underline;
+}
+  </style>
+</head>
+<body>
+
+  <h1>Taller de HTML - Fundamentos Prácticos</h1>
+  <p>Este documento contiene ejercicios prácticos para dominar los conceptos básicos de HTML.</p>
+
+  <h2>Pasos para aprender HTML</h2>
+  <ol>
+    <li>Estudia la estructura básica de una página web.</li>
+    <li>Practica con etiquetas comunes como títulos y párrafos.</li>
+    <li>Aplica tus conocimientos creando proyectos simples.</li>
+  </ol>
+  <h2>Ejemplo de Imagen</h2>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEc9A_S6BPxCDRp5WjMFEfXrpCu1ya2OO-Lw&s" alt="Imagen de ejemplo">
+  <p>Visita el sitio oficial de <a href="https://www.sena.edu.co" target="_blank">SENA</a>.</p>
+
+  <!-- Ejercicio 6 -->
+  <h2>Tabla de Cursos</h2>
+  <table border="2">
+    <tr>
+      <th>Curso</th>
+      <th>Duración</th>
+      <th>Modalidad</th>
+    </tr>
+    <tr>
+      <td>Curso Crochet</td>
+      <td>4 semanas</td>
+      <td>Presencial</td>
+    </tr>
+    <tr>
+      <td>Crochet Avanzado</td>
+      <td>3 semanas</td>
+      <td>Presencial</td>
+    </tr>
+  </table>
+
+  <!-- Ejercicio 7 -->
+  <div>
+    <p>
+      El lenguaje <span style="color: rgb(188, 92, 201); font-weight: bold;">HTML</span> es la base del desarrollo web. 
+      Con él se define la <span style="text-decoration: underline;">estructura</span> de las páginas.
+    </p>
+  </div>
+  
+  <!-- Ejercicio 9 -->
+  <section>
+    <h2>Noticias de Tecnología</h2>
+    <article>
+      <h3>Nueva versión de HTML lanzada</h3>
+      <p>La W3C ha lanzado una nueva actualización con mejoras en accesibilidad.</p>
+    </article>
+  </section>
+
+  <!-- Ejercicio 10 -->
+  <aside>
+    <h3>Enlaces Recomendados</h3>
+    <ul>
+      <li><a href="#">Curso CSS</a></li>
+      <li><a href="#">Guía de JavaScript</a></li>
+      <li><a href="#">Foro de Desarrolladores</a></li>
+    </ul>
+  </aside>
+
+  <!-- Ejercicio 11, 12, 13, 14 y 15 -->
+  <h2>Formulario de Contacto</h2>
+  <form>
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre"><br><br>
+
+    <label for="correo">Correo electrónico:</label><br>
+    <input type="email" id="correo" name="correo"><br><br>
+
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br><br>
+
+    <label>Género:</label><br>
+    <input type="radio" id="masculino" name="genero" value="Masculino">
+    <label for="masculino">Masculino</label><br>
+    <input type="radio" id="femenino" name="genero" value="Femenino">
+    <label for="femenino">Femenino</label><br><br>
+
+    <input type="checkbox" id="terminos" name="terminos">
+    <label for="terminos">Acepto los términos y condiciones</label><br><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ejercicio Contenedores 2</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #menu {
+      background-color: #222;
+      border-top: 4px solid #4CAF50;
+    }
+
+    #menu ul {
+      display: flex;
+      justify-content: flex-end;
+      list-style: none; /* Quita los puntos*/
+      padding: 12px 0;
+    }
+
+    #menu li {
+      margin: 0 20px;
+      color: white;
+      font-weight: bold;
+  
+    }
+
+    .hero {
+      width: 100%;
+      max-height: 300px; /*Corta la imagen*/
+      overflow: hidden;
+
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: brightness(70%); /* Baja el brillo de la imagen*/
+    }
+
+    .texto {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+
+    .texto h1 {
+      font-size: 50px;
+    }
+
+    .texto h2 {
+      font-size: 24px;
+    }
+
+    .texto button {
+      padding: 10px 25px;
+      background-color: #2bc530;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .contenedor-principal {
+      display: flex;
+      gap: 20px;
+      background-color: #c1ebd4;
+      padding: 20px;
+    }
+
+    .caja-grande {
+      flex: 1;
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .caja-grande img {
+      width: 150px;
+      height: 150px;
+    }
+
+    .columna-derecha {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .caja {
+      padding: 15px;
+      display: flex;
+      gap: 10px;
+      background-color: white;
+      border-radius: 10px;
+      align-items: center;
+    }
+
+    .caja img {
+      height: 120px;
+      width: 120px;
+      border-radius: 10px;
+    }
+
+    .contenedor-principal2 {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #e6ecf5;
+      gap: 20px;
+    }
+
+    .caja-grande2 {
+      flex: 2;
+    }
+
+    .columna-derecha2 {
+      flex: 1;
+    }
+
+    h1, h2, h3, h4 {
+      margin: 10px;
+    }
+
+    .tabla-datos {
+      width: 100%;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .tabla-datos th,
+    .tabla-datos td {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .tabla-datos th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .redes_sociales img {
+      margin-right: 10px;
+      border-radius: 10px;
+    }
+
+    .columna-derecha2 img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .formulario {
+      background-color: #000;
+      color: white;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    .formulario input,
+    .formulario textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    .formulario button {
+      background-color: orange;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .footer {
+      background-color: #000;
+      color: #fff;
+      padding: 40px 0 10px 0;
+    }
+
+    .footer-container {
+      display: flex;
+    }
+
+    .footer-column {
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+      background-color: #333;
+      margin: 0 5px;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .footer-column a {
+      display: block;
+      margin: 8px 0;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .footer-column a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+      color: #888;
+      border-top: 1px solid #222;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mis Películas Favoritas</h1>
+  </header>
+
+  <nav id="menu">
+    <ul>
+      <li>Inicio</li>
+      <li>Categorías</li>
+      <li>Populares</li>
+      <li>Contacto</li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <img src="https://i.ytimg.com/vi/nqmRiqM4rLA/hq720.jpg" alt="Frutas frescas">
+    <div class="texto">
+      <h1>Bienvenid@s</h1>
+      <h2>Disfruta mis películas fav</h2>
+      <button>Reserva ya</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- Primera sección -->
+    <section class="contenedor-principal">
+      <div class="caja-grande">
+        <h1>Top películas Disney</h1>
+        <h4>Aladdín</h4>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgmxOb142hhDH4jMEoVr1YtcRe6Z-BvLRauQ&s" alt="Aladdín">
+        <p>Aladdín, un joven pobre de Agrabah, encuentra una lámpara mágica que contiene un genio que le concede tres deseos. Se enamora de la princesa Jasmine y usa sus deseos para ganarse su afecto y liberar al genio.</p>
+      </div>
+
+      <div class="columna-derecha">
+        <div class="caja">
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c6/d0/4c/c6d04c65-d3de-7e03-dd1d-c38dc75804d6/00050087159207.rgb.jpg/1200x630bf-60.jpg" alt="Starstruck">
+          <div>
+            <h2>Películas Recomendadas</h2>
+            <h4>Starstruck</h4>
+            <p>Jessica conoce por accidente a Christopher, una estrella del pop. A pesar de sus diferencias, surge una conexión especial entre ellos.</p>
+          </div>
+        </div>
+
+        <div class="caja">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzoQiCOigwJyaJ999-A8UXbZ2xFnQ4c5-Pgw&s" alt="Bella">
+          <div>
+            <h4>La Bella y la Bestia</h4>
+            <p>Un cuento que narra la historia de Bella, una joven bondadosa, y la Bestia, un príncipe maldecido transformado en una criatura monstruosa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Segunda sección -->
+    <section class="contenedor-principal2">
+      <div class="caja-grande2">
+        <h1>Películas Populares del Mes</h1>
+        <h4>Ranking basado en opiniones</h4>
+
+        <table class="tabla-datos">
+          <tr>
+            <th>Puesto</th>
+            <th>Título</th>
+            <th>Género</th>
+            <th>Calificación</th>
+            <th>Año</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Stitch</td>
+            <td>Animación</td>
+            <td>9.2</td>
+            <td>2025</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Coco</td>
+            <td>Animación</td>
+            <td>9.0</td>
+            <td>2017</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Shrek</td>
+            <td>Animación</td>
+            <td>8.7</td>
+            <td>2001</td>
+          </tr>
+        </table>
+
+        <h3>Redes Sociales</h3>
+        <div class="redes_sociales">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" alt="WhatsApp" height="50" width="50">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF58H8w3pm_H5mgkihLstCFTyhzd3DOzE4pA&s" alt="Instagram" height="50" width="50">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/960px-Facebook_logo_%28square%29.png" alt="Facebook" height="50" width="50">
+        </div>
+      </div>
+
+      <div class="columna-derecha2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSljYbS8N80mW6_48XCtWXSvj-dpMnv1p3b_QmL8_vC01Xsm2FMMoEo0eEzXJisPkKOzqc&usqp=CAU" alt="Mapa">
+        <div class="formulario">
+          <h2>Quejas, Reclamos y Sugerencias</h2>
+          <p>Deja tu mensaje y te responderemos pronto.</p>
+          <input type="text" placeholder="Nombre:">
+          <input type="email" placeholder="Correo electrónico:">
+          <input type="text" placeholder="Asunto:">
+          <textarea rows="4" placeholder="Mensaje:"></textarea>
+          <button>Enviar</button>
+        </div>
+      </div>
+    </section>
+    <section>
+      <nav id="menu">
+            <ul>
+      <li>Inicio</li>
+      <li>Categorías</li>
+      <li>Populares</li>
+      <li>Contacto</li>
+    </ul>
+  </nav>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>subtítulo</h3>
+        <a href="#">Enlace</a>
+        <a href="#">Enlace</a>
+        <a href="#">Enlace</a>
+      </div>
+      <div class="footer-column">
+        <h3>subtítulo</h3>
+        <a href="#">Enlace</a>
+        <a href="#">Enlace</a>
+        <a href="#">Enlace</a>
+      </div>
+      <div class="footer-column">
+        <h3>subtítulo</h3>
+        <a href="#">Enlace</a>
+        <a href="#">Enlace</a>
+        <a href="#">Enlace</a>
+      </div>
+      <div class="footer-column">
+        <h3>subtítulo</h3>
+        <a href="#">Enlace</a>
+        <a href="#">Enlace</a>
+        <a href="#">Enlace</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      ©Todos los derechos reservados
+    </div>
+  </footer>
+  
+</body>
+</html>

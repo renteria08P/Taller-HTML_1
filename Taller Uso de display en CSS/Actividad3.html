@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3: Lista de Productos</title>
+    <style>
+        .principal {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+
+    .producto {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .img {
+      max-width: 100px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 18px;
+      margin: 10px 0 5px;
+    }
+
+    h3 {
+      font-size: 16px;
+      color: #555;
+    }
+    </style>
+</head>
+<body>
+    <div id="principal" class="principal">
+        <div id="producto" class="producto">
+            <img id="img" class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfXHcM-c9Vqx2PHP71tO65e8-hsxc4dsek4Q&s" alt="tunica">
+            <h1>Tunica de Slytherin</h1>
+            <h3>$ 250 MIL</h3>
+        </div>
+        <div id="producto" class="producto">
+            <img id="img" class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqoqezAGMM4gMsWqympTBU89OB2s8hgDmzhg&s" alt="varita">
+            <h1>Varita Salazar Slytherin</h1>
+            <h3>$ 150 MIL</h3>
+        </div>
+    </div>
+</body>
+</html>
